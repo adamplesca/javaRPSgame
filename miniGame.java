@@ -1,26 +1,22 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import javax.swing.JOptionPane;
 
 public class miniGame{
     public static void main(String[] args) {
         
-        String userAnswer;
+        String playerAnswer;
 
-        JOptionPane.showMessageDialog(null, "Welcome to Rock Paper Scissors, Write your answer below and see if you win.");
+        botPlayer bot = new botPlayer();
+        gameFunctions gameFunc = new gameFunctions();
 
-        ArrayList<String> bot = new ArrayList<>(Arrays.asList("rock", "paper", "scissors")); //bot for game
-        Collections.shuffle(bot);
+        playerAnswer = JOptionPane.showInputDialog(null, "Welcome to Rock Paper Scissors, Write your answer below and see if you win.");
+        gameFunc.setAnswer(playerAnswer);
+
+        bot.getBotMove();
+        gameFunc.winCalc();
+
+        //JOptionPane.showMessageDialog(null, "You" + result "!"); //TODO write up GUI for player to know what happened
+
+        //TODO make it loop to play as many times as player wants
 
     }
-
-    public int winTracker(){
-
-    }
-
-    public String winnerCalc(){
-        return 
-    }
-
 }
