@@ -11,5 +11,4 @@ public class botPlayer {
         Collections.shuffle(shuffledMoves);
         return shuffledMoves.get(0); 
     }
-
 }
