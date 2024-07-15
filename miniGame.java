@@ -13,21 +13,23 @@ public class miniGame {
 
         do {
             do {
-                playerAnswer = JOptionPane.showInputDialog(null, "Welcome to Rock Paper Scissors. Write your answer below (rock, paper, or scissors) and see if you win.");
+                JOptionPane.showMessageDialog(null, "Welcome to Rock Paper Scissors. Write your answer below and see if you win against the bot.");
+                playerAnswer = JOptionPane.showInputDialog(null, "'Rock, Paper, Scissors, Shoot! ");
                 if (playerAnswer != null) {
                     playerAnswer = playerAnswer.toLowerCase();
                 }
                 if (!validAnswers.contains(playerAnswer)) {
-                    JOptionPane.showMessageDialog(null, "Invalid input! Please enter 'rock', 'paper', or 'scissors'.");
+                    JOptionPane.showMessageDialog(null, "Invalid input! Please enter 'Rock', 'Paper', or 'Scissors'.");
                 }
             } while (!validAnswers.contains(playerAnswer));
 
             gameFunc.setAnswer(playerAnswer);
             gameFunc.winCalc();
 
-            JOptionPane.showMessageDialog(null,  "\n" + "Your move was: " + playerAnswer
+            JOptionPane.showMessageDialog(null, "Your move was: " + playerAnswer
                                               + "\n" + "The bot's move was: " + gameFunc.returnBotMove()
                                               + "\n" + gameFunc.returnWinner()
+                                              + "\n" 
                                               + "\nTotal Player Wins: " + gameFunc.returnPlayerWins()
                                               + "\nTotal Bot Wins: " + gameFunc.returnBotWins()
                                               + "\nTotal Ties: " + gameFunc.returnTotalTies());
