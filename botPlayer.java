@@ -12,5 +12,4 @@ public class botPlayer {
         return shuffledMoves.get(0); 
     }
 
-    //TODO, maybe a smarter way to code something for gameFunc
 }

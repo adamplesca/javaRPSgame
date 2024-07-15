@@ -14,9 +14,7 @@ public class miniGame{
         bot.getBotMove();
         gameFunc.winCalc();
 
-        //JOptionPane.showMessageDialog(null, "You" + result "!"); //TODO write up GUI for player to know what happened
-
-        //TODO make it loop to play as many times as player wants
+        //JOptionPane.showMessageDialog(null, "You" + result "!"); 
 
     }
 }
